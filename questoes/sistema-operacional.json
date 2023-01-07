@@ -1,0 +1,39 @@
+[
+    {
+        "questao": "Qual é o princiapal sistema operacional usado pelos usuarios comuns?",
+        "opcao_a": "Windows",
+        "opcao_b": "Linux",
+        "opcao_c": "MacOs",
+        "resposta": "Windows"
+    },
+    {
+        "questao": "Qual é o princiapal sistema operacional usado pelos servidores?",
+        "opcao_a": "Windows",
+        "opcao_b": "Linux",
+        "opcao_c": "MacOs",
+        "resposta": "Linux"
+    },
+    {
+        "questao": "Qual é o sistema operacional da Apple?",
+        "opcao_a": "Windows",
+        "opcao_b": "Linux",
+        "opcao_c": "MacOs",
+        "resposta": "MacOs"
+    },
+    {
+        "questao": "Qual é a utilidade de um sistema operacional?",
+        "opcao_a": "Editar texto",
+        "opcao_b": "Editar video",
+        "opcao_c": "Fazer o gerenciamento de memoria e de processamento",
+        "resposta": "Fazer o gerenciamento de memoria e de processamento"
+    },
+    {
+        "questao": "Qual é utilidade de um bloco de notas?",
+        "opcao_a": "Editar texto",
+        "opcao_b": "Editar video",
+        "opcao_c": "Fazer o gerenciamento de memoria e de processamento",
+        "resposta": "Editar texto"
+    }
+    
+
+]
