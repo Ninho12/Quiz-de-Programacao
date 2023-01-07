@@ -107,7 +107,18 @@ div{
     cursor: pointer;
 }
 
+/* 
+    Estilizando o Sistema de Escolha 
+*/
 li.escolha{
-    background-color: aqua;
+    background-color: rgb(184, 248, 248);
     border: 1px solid darkblue;
+}
+li.acertou{
+    background-color: lightgreen;
+    border: 1px solid darkgreen;
+}
+li.errou{
+    background-color: lightcoral;
+    border: 1px solid darkred;
 }
