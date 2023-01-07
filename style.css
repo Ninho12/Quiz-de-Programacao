@@ -29,12 +29,85 @@ div{
     box-shadow: 10px 10px 10px #333;
 }
 
+/* Container do placar */
 #placar{
     width: 200px;
-    height: 400px;
+    height: 300px;
 }
 
+/* Container de doações */
+#doacoes{
+    margin-top: 30px;
+    width: 200px;
+    height: 250px;
+}
+
+/* Questionario é o container */
 #questinario{
     width: 600px;
-    min-height: 600px;
+    height: 500px;
+}
+
+/* Pergunta é outro container */
+#pergunta{
+    padding: 10px;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Lista no centro*/
+#pergunta ol{
+    text-align: center;
+}
+
+/* Lista das opções da pergunta */
+#pergunta li{
+    cursor: pointer;
+    width: 500px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+#pergunta li:hover{
+    background-color: #ccc;
+    transition: 0.5s;
+}
+
+/* A pergunta em si */
+#questao{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+#questao_a, #questao_b, #questao_c{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#confirmar{
+    background-color: lightgreen;
+    color: #030;
+    border: 1px solid darkgreen;
+    width: 90%;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+    left: 5%;
+}
+
+#confirmar:hover{
+    cursor: pointer;
+}
+
+li.escolha{
+    background-color: aqua;
+    border: 1px solid darkblue;
 }
