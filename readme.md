@@ -17,3 +17,22 @@ O jogo usa json como forma de amazenamento das questões. Para criar questões b
     sistemas-operacionais.json
 
 na pasta questoes.
+
+## O jogo será publicado
+
+O jogo será publicado em uma plataforma de jogos indies, que se chama itch.io. Eu vou publicar tanto para o Windows e também para o Linux.
+
+## Toda ajuda é bem vinda.
+
+Toda ajuda é bem vinda.
+Você pode me ajudar:
+
+1. Compartilhando o jogo;
+2. Fazendo uma doação;
+3. Codificando;
+
+## Conclusão 
+
+O projeto é um projeto simples mas exercitamos varias habilidades tais como: html, css, javascript, node e electron.
+
+O aplicativo/jogo para desktop estam bem comentado todos os programadores consegue asimilar o codigo.
