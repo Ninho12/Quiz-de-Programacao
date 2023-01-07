@@ -122,3 +122,32 @@ li.errou{
     background-color: lightcoral;
     border: 1px solid darkred;
 }
+
+/*
+    Criando a classe sumir e aparecer.
+*/
+.sumir{
+    animation: sumir 1s linear 1;
+}
+.aparecer{
+    animation: aparecer 1s linear 1;
+}
+
+/* Cria a regra da animação */
+@keyframes sumir {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

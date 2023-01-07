@@ -35,15 +35,19 @@ function confirmar(){
 
     if(escolha != null){
         if(escolha.textContent == opcao){
-            alert("Você Acertou!");
+
             escolha.classList.remove("escolha");
             escolha.classList.add("acertou");
-            proximaPergunta();
+            carregando = true;
+            proximaPergunta(true);
+
         }else{
-            alert("Você Errou!");
+
             escolha.classList.remove("escolha");
             escolha.classList.add("errou");
-            proximaPergunta();
+            carregando = true;
+            proximaPergunta(false);
+
         }
     }else{
         alert("Escolha uma das opções");
@@ -78,7 +82,18 @@ function carregarUma(){
 }
 
 // Proxima pergunta
-function proximaPergunta(){
+function proximaPergunta(acertou){
+
+    // Remover uma das classes: acertou ou errou
+    if(acertou){
+        escolha.classList.remove("acertou");
+    }else{
+        escolha.classList.remove("errou");
+    }
+
+    // Aqui o questionario desaparece
+    animar(false);
+    
 
     // Verificando se é a ultima pergunta
     // Se for muda o numero para 0
@@ -89,5 +104,39 @@ function proximaPergunta(){
     numero++;
     // Carregando uma pergunta
     carregarUma();
+    
+    // Aqui o questionario aparece
+    setTimeout(animar(true), 1000);
+
+    // Remove as classes de animação
+    setTimeout(removerClasses(), 1000);
+
+}
+
+// Função para animar as questões
+// Utilizando classes do css
+
+// A função recebe um valor logico  
+// se for verdadeiro ele aparece se 
+// falso a pergunta desaparece
+function animar(aparecer){
+
+    if(aparecer){
+        pergunta.classList.add("aparecer");
+    }else{
+        pergunta.classList.add("sumir");
+    }
+
+}
+
+// Remover as classes de animações
+function removerClasses(){
+
+    // Remove as 2 classes de animação
+    pergunta.classList.remove("sumir");
+    pergunta.classList.remove("aparecer");
+
+    // Mudar o estado de carregando para carregado
+    carregando = false;
 
 }
