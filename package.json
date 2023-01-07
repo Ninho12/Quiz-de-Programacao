@@ -1,0 +1,22 @@
+{
+  "name": "quiz-de-programacao",
+  "version": "1.0.0",
+  "description": "É um quiz sobre ajundos de programação para os programadores jogarem e também contribuir com o projeto.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jogo",
+    "quiz",
+    "quiz",
+    "programação",
+    "educação"
+  ],
+  "author": "João Paulo Sena Padilha",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^22.0.0"
+  }
+}

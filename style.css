@@ -1,0 +1,40 @@
+/*
+
+    O arquivo do css responsavel pela estilização
+    e animação do quiz de programação.
+
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #ccc;
+    display: absolute;
+}
+
+main{
+    margin: 30px auto;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div{
+    background-color: white;
+    border: 1px solid #000;
+    padding: 10px;
+    box-shadow: 10px 10px 10px #333;
+}
+
+#placar{
+    width: 200px;
+    height: 400px;
+}
+
+#questinario{
+    width: 600px;
+    min-height: 600px;
+}
