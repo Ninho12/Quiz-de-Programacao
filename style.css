@@ -35,6 +35,23 @@ div{
     height: 300px;
 }
 
+#placar h3{
+    font-size: 30px;
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#placar p{
+    font-size: 15px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+#placar span{
+    margin-left: 10px;
+}
+
 /* Container de doações */
 #doacoes{
     margin-top: 30px;
@@ -89,11 +106,16 @@ div{
     padding: 10px;
 }
 
-#confirmar{
+#container-botoes{
+    display: flex;
+    justify-content: start;
+}
+
+#confirmar, #proximo{
     background-color: lightgreen;
     color: #030;
     border: 1px solid darkgreen;
-    width: 90%;
+    width: 45%;
     padding: 5px 10px;
     text-align: center;
     font-size: 30px;
@@ -101,11 +123,24 @@ div{
     position: relative;
     bottom: 10px;
     left: 5%;
+    transition: 0.5s;
 }
 
+/*
+    Configurando as pseudos classes dos botẽos
+*/
 #confirmar:hover{
     cursor: pointer;
 }
+
+#proximo:hover{
+    cursor: pointer;
+}
+#proximo:disabled{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
 
 /* 
     Estilizando o Sistema de Escolha 

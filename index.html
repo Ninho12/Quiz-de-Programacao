@@ -14,9 +14,37 @@
     <main>
 
         <section id="lado">
+
             <div id="placar">
+                <h3>Placar do Quiz</h3>
+                
+                <p>
+                    <b>Pontuação:</b><span id="xp">000 xp</span>
+                </p>
+                
+                <p>
+                <b>Pontuação Seguida:</b><span>2</span>
+                </p>
+
+                <hr>
+
+                <p>
+                <b>Acertou: </b><span>3</span>
+                </p>
+                <p>
+                <b>Errou: </b><span>2</span>
+                </p>
+
+                <hr>
+                <p>
+                <b>A Questão: </b><span>5</span>
+                </p>
+                <p>
+                    <b>Total de Questões</b><span>10</span>
+                </p>
 
             </div>
+
 
             <div id="doacoes">
 
@@ -34,8 +62,19 @@
                     <li id="questao_c" onclick="escolher(this);">MacOs</li>
                 </ol>
 
-                <button id="confirmar" onclick="confirmar()">Confirmar</button>
+                <section id="#container-botoes">
 
+                    <button id="confirmar" 
+                    onclick="confirmar()">
+                        Confirmar
+                    </button>
+
+                    <button id="proximo" disabled
+                    onclick="proximaPergunta()">
+                        Proximo
+                    </button>
+                
+                </section>
             </article>
         </div>
     </main>

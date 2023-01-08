@@ -4,6 +4,9 @@ var escolha = null;
 // variavel da escolha correta
 var escolha_correta = "";
 
+// variavel se acertou
+var acertou = false;
+
 // variavel de estado
 var carregando = false;
 
@@ -39,21 +42,26 @@ function confirmar(){
             escolha.classList.remove("escolha");
             escolha.classList.add("acertou");
             carregando = true;
-            proximaPergunta(true);
+            acertou = true;
+            
 
         }else{
 
             escolha.classList.remove("escolha");
             escolha.classList.add("errou");
             carregando = true;
-            proximaPergunta(false);
+            acertou = false;
+            
 
         }
     }else{
         alert("Escolha uma das opções");
-        
-    }
+        return;
 
+        // o return é para não executar o proximo comando
+    }
+    // Habilitando o botao proximo
+    proximo.disabled = false;
 }
 
 // Carregar todas as perguntas
@@ -82,9 +90,10 @@ function carregarUma(){
 }
 
 // Proxima pergunta
-function proximaPergunta(acertou){
+function proximaPergunta(){
 
     // Remover uma das classes: acertou ou errou
+    // acertou é uma variavel global
     if(acertou){
         escolha.classList.remove("acertou");
     }else{
@@ -102,14 +111,25 @@ function proximaPergunta(acertou){
         numero = 0;
     // Aumentando o numero
     numero++;
+
     // Carregando uma pergunta
-    carregarUma();
+    setTimeout(carregarUma(), 1000);
     
     // Aqui o questionario aparece
-    setTimeout(animar(true), 1000);
+    animar(true);
 
     // Remove as classes de animação
-    setTimeout(removerClasses(), 1000);
+    setTimeout(removerClasses(), 2000);
+
+    // Desabilita o botão proximo
+    proximo.disabled = true;
+
+    // Deixando a escolha nula
+    escolha = null;
+    /*
+        Isso é para o usario escolher sempre 
+        uma das opçoes.
+    */
 
 }
 
@@ -127,6 +147,7 @@ function animar(aparecer){
         pergunta.classList.add("sumir");
     }
 
+
 }
 
 // Remover as classes de animações
@@ -138,5 +159,39 @@ function removerClasses(){
 
     // Mudar o estado de carregando para carregado
     carregando = false;
+
+}
+
+/*
+    Nos proximos codigos serão
+    para implementar um sistema de 
+    pontos.
+*/
+// Variaveis Globais:
+var pontos = 0;
+var pontuacao_seguida = 0;
+
+// Funçoes:
+function pontuarPositivo(){
+    // Somando os pontos
+    // Cada acerto é 100 pontos
+    pontos+= 100;
+
+    // Contando a pontuação seguida;
+    pontuacao_seguida++;
+}
+
+function pontuarNegativo(){
+    // Subtraindo os pontos;
+    // Cada erro é menos 100 pontos;
+    pontos-= 100;
+
+    // Zerando a pontuação seguida;
+    pontuacao_seguida = 0;
+}
+
+function atualizarPontuacao(){
+
+    
 
 }
