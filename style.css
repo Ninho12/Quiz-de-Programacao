@@ -133,7 +133,7 @@ li.errou{
     animation: aparecer 1s linear 1;
 }
 
-/* Cria a regra da animação */
+/* Cria as animações */
 @keyframes sumir {
     from {
       opacity: 1;
