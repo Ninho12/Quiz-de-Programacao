@@ -2,14 +2,14 @@
     {
         "questao": "Qual é o princiapal sistema operacional usado pelos usuarios comuns?",
         "opcao_a": "Windows",
-        "opcao_b": "Linux",
-        "opcao_c": "MacOs",
+        "opcao_b": "MacOS",
+        "opcao_c": "Linux",
         "resposta": "Windows"
     },
     {
         "questao": "Qual é o princiapal sistema operacional usado pelos servidores?",
-        "opcao_a": "Windows",
-        "opcao_b": "Linux",
+        "opcao_a": "Linux",
+        "opcao_b": "Windows",
         "opcao_c": "MacOs",
         "resposta": "Linux"
     },
@@ -33,6 +33,41 @@
         "opcao_b": "Editar video",
         "opcao_c": "Fazer o gerenciamento de memoria e de processamento",
         "resposta": "Editar texto"
+    },
+    {
+        "questao": "Qual é utilidade de VS Code?",
+        "opcao_a": "Editar codigo",
+        "opcao_b": "Editar texto",
+        "opcao_c": "Fazer o gerenciamento do processamento",
+        "resposta": "Editar codigo"
+    },
+    {
+        "questao": "Qual é comando para criar uma pasta no Linux",
+        "opcao_a": "mkdir <nome-da-pasta>",
+        "opcao_b": "cd <nome-da-pasta>",
+        "opcao_c": "clear nome-da-pasta",
+        "resposta": "mkdir <nome-da-pasta>"
+    },
+    {
+        "questao": "Qual é sistema operacional mais usado no mundo?",
+        "opcao_a": "Android",
+        "opcao_b": "Ios",
+        "opcao_c": "Windows",
+        "resposta": "Android"
+    },
+    {
+        "questao": "Qual é comando para limpa o terminal no Linux",
+        "opcao_a": "mkdir",
+        "opcao_b": "cd",
+        "opcao_c": "clear",
+        "resposta": "clear"
+    },
+    {
+        "questao": "Qual é comando para mudar de diretorio",
+        "opcao_a": "mkdir <nome-da-pasta>",
+        "opcao_b": "cd <nome-da-pasta>",
+        "opcao_c": "clear nome-da-pasta",
+        "resposta": "cd <nome-da-pasta>"
     }
     
 
