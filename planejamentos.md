@@ -5,11 +5,12 @@ em cada versão do jogo.
 
 ## Versão 1.0
 
-1. Sistema de perguntas funcionando;
+1. Sistema de perguntas funcionando; Feito;
 
-2. Sistema de pontos funcionando;
+2. Sistema de pontos funcionando; Feito;
 
-3. Pagina de parabens funcionando;
+3. Pagina de parabens funcionando; Ainda em desenvolvimento;
+    Apresenta bug mas amanha eu conserto;
 
 QUE JESUS ME ABENÇÕE!!!        
 

@@ -1,3 +1,6 @@
+// Objeto do sistema
+const { app } = require('electron');
+
 // Variaveis Globais
 // variavel escolha
 var escolha = null;
@@ -43,7 +46,7 @@ function confirmar(){
             escolha.classList.add("acertou");
             carregando = true;
             acertou = true;
-            
+            pontuarPositivo();
 
         }else{
 
@@ -51,7 +54,7 @@ function confirmar(){
             escolha.classList.add("errou");
             carregando = true;
             acertou = false;
-            
+            pontuarNegativo();
 
         }
     }else{
@@ -71,7 +74,9 @@ async function  carregarTodas(){
 
     questoes = await res.json();
 
+    // Carrega uma pergunta
     carregarUma();
+    
 
 }
 
@@ -87,10 +92,18 @@ function carregarUma(){
 
     escolha_correta = questoes[numero].resposta;
 
+    // Atualiza o Placar
+    //atualizarPontuacao();
 }
 
 // Proxima pergunta
 function proximaPergunta(){
+
+    // Dar os parabens!
+    if((numero+1) === questoes.length){
+        confirm("Muito Obrigado por ter Jogado o Quiz!");
+    
+    }
 
     // Remover uma das classes: acertou ou errou
     // acertou é uma variavel global
@@ -171,6 +184,10 @@ function removerClasses(){
 var pontos = 0;
 var pontuacao_seguida = 0;
 
+var quantidade_acertou = 0;
+var quantidade_errou = 0;
+
+
 // Funçoes:
 function pontuarPositivo(){
     // Somando os pontos
@@ -179,6 +196,12 @@ function pontuarPositivo(){
 
     // Contando a pontuação seguida;
     pontuacao_seguida++;
+
+    // Contar a quantidade que acertou;
+    quantidade_acertou++;
+
+    // Atualizando o Placar
+    atualizarPontuacao();
 }
 
 function pontuarNegativo(){
@@ -188,10 +211,33 @@ function pontuarNegativo(){
 
     // Zerando a pontuação seguida;
     pontuacao_seguida = 0;
+
+    // Contar a quantidade que errou;
+    quantidade_errou++;
+
+    // Atualizando o Placar
+    atualizarPontuacao();
 }
 
 function atualizarPontuacao(){
 
-    
+    // Atualizando os pontos
+    xp.textContent = pontos+" XP"
+
+    // Atualizando os pontos seguidos
+    pontuacaoSeguida.textContent = pontuacao_seguida;
+
+    // Atualiza a quantidade que acertou
+    quantAcertou.textContent = quantidade_acertou;
+
+    // Atualiza a quantidade que errou
+    quantErrou.textContent = quantidade_errou;
+
+    // Numero da pergunta
+    aPergunta.textContent = (numero+1)
+
+    // Quantidade total
+    totalQuestoes.textContent = questoes.length;
+
 
 }
